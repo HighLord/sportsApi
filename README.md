@@ -1,12 +1,17 @@
-# React + Vite
+# 🏆 Sports API
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, scalable sports analytics dashboard built with **React (Vite + JavaScript)**.  
+It connects to RESTful sports data endpoints to manage and visualize fixtures, odds, predictions, and team statistics.
 
-Currently, two official plugins are available:
+## 🚀 Features
+- Fast and lightweight Vite-powered frontend
+- Dynamic API integration for sports data
+- Modular architecture for SaaS scaling
+- Interactive result tracking and prediction visualization
+- Easy deployment on VPS or any modern hosting service
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ Stack
+- **Frontend:** React + Vite + JavaScript  
+- **Styling:**  CSS  
+- **API:** Custom backend (PHP integration ready)  
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
