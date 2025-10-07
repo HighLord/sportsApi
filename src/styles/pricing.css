@@ -1,0 +1,63 @@
+.pricing-intro {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(to right, #1a237e, #283593);
+    color: white;
+}
+
+.pricing-intro h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.pricing-intro p {
+font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.pricing-cta{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pricing-cta div {
+    text-align: center;
+    padding: 40px 20px;
+    color: #000000;
+}
+
+.pricing-cta h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #2c3c82;
+}
+
+.pricing-cta p {
+    font-size: 1rem;
+    margin-bottom: 25px;
+}
+
+.cta-btn2 {
+    display: inline-block;
+    background: #ffffff;
+    color: #2c3c82;
+    padding: 12px 25px;
+    border-radius: 12px;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow:
+            -4px -4px 10px rgba(255, 255, 255, 0.1),
+            6px 6px 15px rgba(0, 0, 0, 0.7);
+}
+
+.cta-btn2:hover {
+    padding: 11px 24px;
+    background: #f6f6f6;
+    transform: translateY(-3px);
+box-shadow:
+        -2px -2px 8px rgba(255, 255, 255, 0.15),
+        8px 8px 20px rgba(0, 0, 0, 0.8);
+}

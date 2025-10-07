@@ -1,0 +1,152 @@
+.account-popup-overlay {
+    position: fixed;
+    top: 81px;
+    left: 70px;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.account-popup {
+    position: absolute;
+    background: white;
+    border-radius: 2px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1001;
+}
+
+.account-popup-overlay, .account-popup {
+    width: calc(100vw - 80px);
+    height: 87.6vh;
+    transform: translateX(100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease;
+}
+
+.account-popup-overlay.active, .account-popup {
+    transform: translateX(0px);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.popup-content {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 0;
+}
+
+.popup-link {
+    cursor: pointer;
+    padding: 12px 16px;
+    color: #333;
+    text-decoration: none;
+    transition: all 0.2s;
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+}
+
+.popup-link:hover {
+    background: #f8f9fa;
+        color: #2980b9;
+}
+
+.popup-link.active {
+    background: #f0f7ff;
+        color: #2980b9;
+        font-weight: 500;
+}
+
+.popup-avatar {
+    background: linear-gradient(to right, #f6f8fd, #f0f4f9);
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+.avatar-circle {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(180deg, #3e55db, #6447ff);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 auto 10px;
+}
+
+.user-info {
+    margin-top: 20px;
+}
+
+.user-info h4 {
+    margin: 0;
+    color: #333;
+    font-size: 16px;
+}
+
+.user-info span {
+    font-size: 13px;
+    color: #666;
+}
+
+.popup-icon {
+    margin-right: 12px;
+    font-size: 16px;
+    width: 20px;
+    display: inline-flex;
+    justify-content: center;
+}
+
+.back-button {
+    position: relative;
+    float: left;
+    bottom: 1px;
+    background: linear-gradient(to right, #f6f8fd, #f0f4f9);
+    border: none;
+    font-size: 20px;
+    border-radius: 0px 0px 10px 0px;
+    cursor: pointer;
+    color: #666;
+}
+.back-button:hover {
+    background: #e1e7f5;
+    color: #2980b9;
+}
+
+@media (min-width: 700px) {
+    .account-popup-overlay {
+        width: calc(100vw - 80px);
+        display: flex;
+        justify-content: flex-end;
+    }
+    .account-popup {
+        width: calc(60vw);
+    }
+}
+@media (min-width: 701px) {
+    .account-popup {
+        width: calc(70%);
+    }
+}
+@media (min-width: 800px) {
+    .account-popup {
+        width: calc(60%);
+    }
+}
+@media (min-width: 1000px) {
+    .account-popup {
+        width: calc(50%);
+    }
+}
+@media (min-width: 1350px) {
+    .account-popup {
+            width: calc(35%);
+        }
+}

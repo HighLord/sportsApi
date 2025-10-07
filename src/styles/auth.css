@@ -1,0 +1,204 @@
+.auth-container {
+    max-width: 400px;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    background: white;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: calc(100vh - 282px);
+}
+
+@media screen and (max-width: 500px) {
+    .auth-container {
+        min-height: calc(100vh - 290px);
+    }
+    
+}
+
+.auth-tabs {
+    display: flex;
+}
+
+.auth-tabs button {
+    flex: 1;
+    padding: 0.75rem;
+    border: none;
+    cursor: pointer;
+    background: #eee;
+    font-weight: bold;
+    transition: 0.3s;
+    
+}
+
+.auth-tabs button:first-child {
+    border-radius: 10px 0 0 10px;
+    border-right: 1px solid #3e55db;
+}
+
+.auth-tabs button:last-child {
+    border-radius: 0 10px 10px 0;
+    border-left: 1px solid #3e55db;
+}
+
+.auth-tabs button.active {
+    background: #0070f3;
+    color: white;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.auth-form h2 {
+    text-align: center;
+    margin-bottom: auto;
+}
+
+.name-row {
+    display: flex;
+    gap: 1rem;
+}
+
+.input-group {
+    position: relative;
+    flex: 1;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    outline: none;
+    background: transparent;
+    transition: border-color 0.18s ease, box-shadow 0.18s ease;
+    box-sizing: border-box;
+}
+
+.input-group label {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    color: #888;
+    font-size: 0.7rem;
+    pointer-events: none;
+    transition: top 0.5s ease, font-size 0.5s ease, color 0.22s ease, transform 0.5s ease;
+    background: white;
+    /* match your card background, change if needed */
+    padding: 0 .5em;
+    z-index: 2;
+}
+
+/* On focus or filled */
+.input-group input:focus+label,
+.input-group input:not(:placeholder-shown)+label,
+.input-group input:valid+label{
+    top: -9px;
+    left: 10px;
+    padding: 0  .6em;
+    font-size: 0.75rem;
+    color: #3e55db;
+    transform: none;
+}
+
+.input-group input:focus {
+    border-color: #3e55db;
+    box-shadow: 0 6px 18px rgba(62, 85, 219, 0.06), inset -2px -2px 6px rgba(255, 255, 255, 0.02);
+}
+
+.auth-form button {
+    background: #0070f3;
+    color: white;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.spinner {
+    display: inline-block;
+    width: 15px;
+    height: 12px;
+    position: relative;
+}
+
+.spinner-inner {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    margin: 2px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    animation: spinner 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #ffffff transparent transparent transparent;
+}
+
+@keyframes spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* Optional: Style for the button to maintain consistent width */
+button {
+    min-width: 100px;
+    /* Adjust based on your needs */
+}
+
+.divider {
+    margin: 10px 0;
+    text-align: center;
+    font-size: 12px;
+    color: #666;
+    position: relative;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 40%;
+    height: 1px;
+    background: #ccc;
+}
+
+.divider::before {
+    left: 0;
+}
+
+.divider::after {
+    right: 0;
+}
+
+.google-login {
+    text-align: center;
+}
+
+.google-btn {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 0.75rem;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+}

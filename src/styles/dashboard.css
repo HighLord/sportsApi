@@ -1,0 +1,243 @@
+/* dashboard.css - basic responsive layout and styles */
+:root { 
+    --bg: #0f1724;
+    --card: linear-gradient(145deg, #111827, #0b1220);
+    --accent: #3e55db;
+    --muted: #98a0b3;
+    --glass: rgba(255, 255, 255, 0.03);
+}
+
+/* Root layout */
+.dashboard-root {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* bar */
+.dash-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: var(--card);
+    padding: 18px 10px;
+    transition: width .25s ease, transform .28s ease;
+    color: white;
+    width: 40px;
+}
+
+.dashboard-root.expanded .dash-sidebar {
+    width: 180px;
+    z-index: 9999;
+}
+
+/* Main section shifts based on sidebar */
+.dashboard-main {
+    flex-grow: 1;
+    transition: margin-left 0.3s ease;
+    margin-left: 60px;
+}
+
+.nav-icon {
+    font-size: 15px;
+}
+.nav-text{
+    font-size: 0.95rem;
+}
+
+.logout-timer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 10px;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.05);
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: #fff;
+    min-width: 80px;
+    cursor: help;
+    box-shadow:
+            -2px -2px 8px rgba(255, 255, 255, 0.15),
+            8px 8px 20px rgba(0, 0, 0, 0.8);
+}
+
+/* Tooltip styling */
+.logout-timer[data-tooltip]::after{
+    content: attr(data-tooltip);
+    position: absolute;
+    right: -55px;
+    top: 30px;
+    background: var(--card);
+    color: #f80505;
+    font-size: 0.6rem;
+    width: 400px;
+    text-align: right;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+    z-index: 20;
+}
+
+/* On hover OR when forced */
+.logout-timer[data-tooltip]:hover::after,
+.logout-timer.show-tooltip::after {
+    opacity: 1;
+}
+
+/* Nav items */
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;;
+}
+
+.dash-nav-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px;
+    border-radius: 9px;
+    color: #cdd6ff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all .18s ease;
+    white-space: nowrap;
+}
+.dash-nav-item[href="/logout"]{
+    position: absolute;
+    bottom: calc(0% + 50px);
+}
+.dash-nav-item[href="/logout"]:hover{
+    color: red;
+    padding-right: 30px;
+}
+
+.dash-nav-item:hover {
+    padding-right: 50px;
+    border-radius: 9px 40px 40px 9px;
+    color: var(--accent);
+    transform: translateX(6px);
+    background: var(--card);
+}
+
+.plan-badge{
+    position: relative;
+    bottom: 5px;
+    float: right;
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color: #ffffff;
+}
+
+.dash-active {
+    padding-right: 50px;
+    background: var(--card);
+    border-radius: 9px 40px 40px 9px;
+    box-shadow: 0 6px 18px rgba(62, 85, 219, 0.06);
+    color: var(--accent)
+}
+
+/* Sidebar footer */
+.sidebar-footer {
+    height: 85%;
+    font-size: 12px;
+    color: var(--muted);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* main area */
+.dashboard-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(180deg, rgba(188, 192, 200, 0.6), rgba(120, 128, 152, 0.8));
+}
+
+/* Topbar */
+.dash-topbar {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+    background: var(--card);
+}
+
+.hamburger-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+    padding: 8px 10px;
+    border: none;
+    color: #ddd;
+    font-size: 20px;
+    border-radius: 9px;
+    background: var(--glass);
+    box-shadow: -4px -4px 8px rgba(255, 255, 255, 0.02) inset, 6px 6px 12px rgba(0, 0, 0, 0.6);
+    transition: all 0.25s ease;
+}
+.hamburger {
+    font-weight: 700;
+}
+
+.hamburger-wrapper:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.brand-text {
+    font-weight: 700;
+    font-size: 14px;
+    color: #eaf0ff;
+    white-space: nowrap;
+}
+
+.topbar-title {
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: #eaf0ff
+}
+
+.topbar-actions {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 12px
+}
+
+.topbar-search {
+    padding: 8px 10px;
+    border-radius: 10px;
+    border: none;
+    background: rgba(255, 255, 255, 0.03);
+    color: #eee;
+    min-width: 220px
+}
+
+.avatar {
+    color: white;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #3e55db, #6447ff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* responsive */
+@media (max-width: 700px) {
+    .topbar-search {
+        display: none
+    }
+}

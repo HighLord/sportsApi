@@ -1,0 +1,35 @@
+.cta {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(to right, #00c853, #1a237e);
+    color: white;
+    box-shadow: -5px -5px 5px rgba(255, 255, 255, 0.2) inset, 15px 15px 15px rgba(0, 0, 0, 0.1) inset,
+            -5px -5px 5px rgba(255, 255, 255, 0.2) inset, 15px 15px 15px rgba(0, 0, 0, 0.1) inset;
+}
+
+.cta h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.cta p {
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+}
+
+.cta-btn {
+    box-shadow: -5px -5px 5px rgba(255, 255, 255, 0.2) inset, 15px 15px 15px rgba(0, 0, 0, 0.1) inset,
+            -5px -5px 5px rgba(255, 255, 255, 0.2) inset, 15px 15px 15px rgba(0, 0, 0, 0.1) inset;
+    background: white;
+    color: #1a237e;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cta-btn:hover {
+    background: #f4f4f4;
+}

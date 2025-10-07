@@ -1,0 +1,32 @@
+.how-it-works {
+    padding: 60px 20px;
+    background: white;
+    text-align: center;
+}
+
+.how-it-works h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #1a237e;
+}
+
+.steps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.step-card {
+    background: #f9f9ff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 250px;
+    box-shadow: -5px -5px 5px rgba(255, 255, 255, 0.2) inset, 15px 15px 15px rgba(0, 0, 0, 0.1) inset,
+            -5px -5px 5px rgba(255, 255, 255, 0.2) inset, 15px 15px 15px rgba(0, 0, 0, 0.1) inset;
+}
+
+.step-icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,28 @@
+.requests-box {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+    justify-content: space-evenly;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-right: 20px;
+    min-height: 300px;
+    width: calc(100% - 40px);
+    font-size: 10px;
+}
+
+.requests-box h3 {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.requests-chart {
+    margin-left: -50px;
+    height: 250px;
+}
+
+.recharts-surface {
+    outline: none;
+}
